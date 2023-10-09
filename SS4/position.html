@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .position-relative {
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            margin-top: 200px;
+            margin-left: 200px;
+            position: relative;
+            top: 50px;
+            
+            /* bottom: 
+            left: 50px;
+            right:  */
+        }
+
+        .position-absolute {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            background-color: red;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+        }
+
+        .z-index {
+            width: 150px;
+            height: 150px;
+        }
+
+        .color-1 {
+            background-color: red;
+            position: relative;
+            z-index: 5;
+        }
+
+        .color-2 {
+            background-color: blue;
+            position: absolute;
+            z-index: 10;
+            top: 25px;
+        }
+
+        .position-fix {
+            width: 100%;
+            height: 50px;
+            position: fixed;
+            top: 0;
+        }
+
+        .box-chat {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            border-radius: 50%;
+            background-color: purple;
+            position: fixed;
+            right: 50px;
+            bottom: 50px;
+        }
+    </style>
+</head>
+<body style="height: 2000px;">
+
+    <!-- <div class="position-relative">
+        <div class="position-absolute">
+            
+        </div>
+    </div> -->
+
+    <!-- <div class="z-index color-1"></div>
+    <div class="z-index color-2"></div> -->
+
+    <div style="background-color: blue;" class="position-fix"></div>
+
+    <div class="box-chat"></div>
+
+</body>
+</html>

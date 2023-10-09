@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .flex-container {
+            width: 500px;
+            height: 500px;
+            background-color: red;
+            display: flex
+        }
+
+        .item {
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+
+    <!-- <style>
+        .container {
+          display: flex;
+          width: 500px;
+          height: 500px;
+          background-color: gray;
+          justify-content: space-between;
+          align-items: flex-start;
+        }
+      
+        .item {
+          width: 50px;
+          height: 50px;
+          background-color: lightgreen;
+          border: 1px solid black;
+          font-size: 24px;
+        }
+      </style> -->
+</head>
+
+<body>
+
+    <!-- Các thẻ inline có thể nằm cùng dòng, không thể thay đổi width, height -->
+    <!-- <span>Ví dụ về 1 thẻ có thuộc tính display: inline</span>
+    <span>Ví dụ về 1 thẻ có thuộc tính display: inline</span> -->
+
+    <!-- Các thẻ block không thể nằm cùng dòng -->
+    <!-- <div>Đây là ví dụ về 1 thẻ có thuộc tính display: block</div>
+    <div>Đây là ví dụ về 1 thẻ có thuộc tính display: block</div> -->
+
+
+    <!-- Các thẻ inline-block cho phép thay đổi width, height và chúng có thể nằm cùng 1 hàng -->
+    <!-- <div>Đây là 1 ví dụ cho thẻ có thuộc tính display: inline-block</div>
+    <div>Đây là 1 ví dụ cho thẻ có thuộc tính display: inline-block</div> -->
+
+    <div class="flex-container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+
+    <!-- <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item" style="align-self: flex-end">5</div>
+      </div> -->
+</body>
+
+</html>

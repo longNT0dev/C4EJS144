@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: black;   
+}
+
+.search-container {
+    width: 80%;
+    height: 100%;
+    background-image: url("https://marketplace.canva.com/EAD2962NKnQ/2/0/1600w/canva-rainbow-gradient-pink-and-purple-virtual-background-_Tcjok-d9b4.jpg");
+    background-size: cover;
+    margin: auto;
+}
+
+.searchbar {
+    width: 70%;
+    height: 50%;
+    margin: auto;
+    position: relative;
+    top: 190px;
+}
+
+.searchbar h1 {
+    text-align: center;
+}
+
+.search-list {
+    height: 60px;
+    background-color: rgba(0,0,0,0.7);
+    padding: 12px;
+}
+
+.search-list-container {
+    display: inline-block;
+    width: 400px;
+    height: 100%;
+}
+
+.search-btn {
+    display: inline-block;
+    height: 100%;
+}

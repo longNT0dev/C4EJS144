@@ -1,0 +1,27 @@
+/* shared class */
+
+.text-color {
+    color: #698c8e;
+}
+
+.separator {
+    width: 80%;
+    border-bottom: 4px dashed black;
+}
+
+.circle-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+
+/* style */
+* {
+    font-family: 'Pixelify Sans', cursive;
+}
+
+.container {
+    width: 50%;
+    background-color: antiquewhite;
+}
