@@ -20,20 +20,28 @@
                     <div class="search-list-container">
                         <div class="search-item">
                             <i class="fa-solid fa-location-dot"></i>
-                            <span>New York</span>
+                            <select id="location" class="remove-border-outline">
+                                <option value="New York">New York</option>
+                                <option value="Florida">Florida</option>
+                                <option value="Texas">Texas</option>
+                                <option value="Colorado">Colorado</option>
+                                <option value="California">California</option>
+                            </select>
                         </div>
-                        
+
                         <div class="search-item">
                             <i class="fa-solid fa-calendar-week"></i>
-                            <span>12 JUN 2018</span>
+                            <input type="date" class="remove-border-outline">
                         </div>
                         <div class="search-item">
                             <i class="fa-solid fa-calendar-week"></i>
-                            <span>14 JUN 2018</span>
+                            <input type="date" class="remove-border-outline">
                         </div>
                         <div class="search-item">
                             <i class="fa-solid fa-user"></i>
-                            <span>2 people</span>
+                            <input type="range" min="1" max="8" step="1" value="1"
+                                oninput="this.nextElementSibling.value = this.value"> 
+                                <output>1</output> người
                         </div>
                     </div>
 

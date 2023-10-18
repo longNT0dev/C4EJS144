@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar {
+    width: 100%;
+    height: 185px;
+    background-image: url("https://trendy.w2.exdomain.net/image/cache/catalog/slider/slider-trendy-3-1920x1100.jpg");
+    background-size: cover;
+}
+
+.overlay {
+    width: 100%;
+    height: 185px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.menu {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+
+}
+
+.menu i {
+    font-size: 24px;
+    color: white;
+}
+
+.menu img {
+    width: 150px;
+    height: 56px;
+}
+
+.search-bar {
+    padding: 12px;
+    height: 40px;
+    position: relative;
+}
+
+.search-bar input {
+    width: 100%;
+    height: 40px;
+}
+
+.search-bar i {
+    font-size: 18px;
+    position: absolute;
+    right: 20px;
+    top: 24px;
+}
