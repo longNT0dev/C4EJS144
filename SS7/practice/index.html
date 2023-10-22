@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // BT1: In ra các số lẻ trong khoảng từ (0 -> 1020)
+        // for(let i = 0; i <= 1020; i++) {
+        //     if(i % 2 != 0) {
+        //         console.log(i)
+        //     }
+        // }
+
+        // BT2: Tính tổng của các số chẵn và tổng của các số lẻ trong khoảng từ (0 -> 1060)
+        // let evenSum = 0 
+        // let oddSum = 0
+        // for(let i = 0; i <= 1060; i++) {
+        //     if(i % 2 == 0) {
+        //         oddSum = oddSum + i
+        //     } else {
+        //         evenSum = evenSum + i
+        //     }
+        // }
+
+        // console.log(oddSum, evenSum)
+
+        // BT3: Tạo 1 chức năng nhỏ cho phép người dùng nhập liên tục các số, tính tích các số đó và in ra kết
+        // quả khi người dùng nhập "Kết thúc"  
+        let result = 1
+        while(true) {
+            let inputUser = prompt("Nhập vào số cần tính tích")
+
+            if(inputUser === "Kết thúc") {
+                break
+            } else {
+                let convertedNumberInput = +inputUser
+
+                if(Number.isNaN(convertedNumberInput)) {
+                    console.log("Giá trị nhập vào không phải số")
+                    break
+                } else {
+                    result = result * convertedNumberInput
+                }
+            }
+        }
+
+        console.log(result)
+        // BT4: In ra màn hình ngày nghỉ hoặc ngày làm việc khi người dùng nhập vào các thứ Monday, Tuesday, Wednesday,... biết mn làm việc từ thứ 2 tới thứ 6, nghỉ thứ 7 và chủ nhật
+
+        // BT5: Tính số tiền điện phải trả trong 1 tháng biết bảng giá điện như sau: 
+        // 0 - 50kwh có giá 500/kwh
+        // 51 -100kwh có giá 800/kwh
+        // 101 - 500kwh có giá 1500/kwh
+        // biết số điện sử dụng được nhập bởi người quản lý
+        // Nâng cao: Giả sử tài khoản của người quản lý là admin, mật khẩu 123456. Hãy kiểm tra để yêu cầu người dùng nhập đúng thông tin tài khoản mới được nhập số điện để thực hiện tính toán. Nếu nhập sai dưới 5 lần sẽ thông báo nhập sai tài khoản, nếu nhập sai 5 lần sẽ thông báo khóa tài khoản
+    </script>
+</body>
+</html>
