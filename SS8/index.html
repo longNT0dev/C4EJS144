@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // number, string, boolean, undefined, null
+
+        // array, object 
+
+        // Array: CRUD - create, read, update, delete 
+        // let vehicle1 = "xe đạp"
+        // let vehicle2 = "xe máy"
+        // let vehicle3 = "ô tô"
+
+        // // create
+        // let vehicles = [ "xe đạp", "xe máy", "ô tô" ]
+
+        // // read: Chỉ số index: 0 -> vehicles.length - 1
+        // // console.log(vehicles[2] + " của tôi")
+        // console.log(vehicles[0])
+        // console.log(vehicles[1])
+        // console.log(vehicles[2])
+
+        // for(let i = 0; i < vehicles.length; i++) {
+        //     console.log(vehicles[i])
+        // }
+
+        // update giá trị của 1 phần tử trong mảng
+        // vehicles[0] = vehicles[0] + " của tôi"
+        // vehicles[1] = vehicles[1] + " của tôi"
+
+        // console.log(vehicles)
+        // for(let i = 1; i < vehicles.length; i++) {
+        //     vehicles[i] = vehicles[i] + " của tôi"
+        // }
+
+        // console.log(vehicles)
+
+        // update mảng
+        // push thêm phần tử vào cuối mảng
+        // vehicles.push("xe đạp điện")
+
+        // console.log(vehicles)
+
+        // // pop lấy phần tử ở cuối mảng ra
+        // vehicles.pop()
+
+        // console.log(vehicles)
+
+        // // unshift thêm phần tử vào đầu mảng
+        // vehicles.unshift("xe tải")
+
+        // console.log(vehicles)
+
+        // // shift lấy phần tử ở đầu mảng ra
+        // vehicles.shift()
+
+        // console.log(vehicles)
+
+        // delete
+        // splice vs slice: splice biến đổi mảng ban đầu, slice tạo 1 mảng mới từ mảng ban đầu và biến đổi mảng này
+
+        // console.log(vehicles.splice(0))
+        // console.log(vehicles.splice(1))
+        // let vehicles = [ "xe đạp", "xe máy", "ô tô" ]
+
+        // let newVehicles = vehicles.splice(2, 1, "Thêm mới")
+        // console.log(newVehicles)
+        // console.log(vehicles)
+        // console.log(vehicles.splice(0, 1, "Phần tử được thêm vào 1", " Phần tử được thêm vào 2"))
+
+
+        // Object: Đối tượng thường là các thực thể trong thực tế
+
+        // create
+        let user = {
+            // properties
+            username: "Nguyễn Thành Long",
+            password: "123456",
+            nationality: "Việt Nam",
+            age: 32,
+
+            login: function () {
+                // Hành động thực hiện
+            },
+            dangkythi: function () {
+                // Hành động thực hiện
+            }
+        }
+
+        // read
+        console.log(user.username)
+        console.log(user.password)
+
+        // update
+        user.username = "username đã cập nhật"
+
+        console.log(user)
+
+        // delete
+        delete user.username
+
+        console.log(user)
+
+        let users = [{
+                username: "Nguyễn Thành Long 1",
+                password: "123456",
+                nationality: "Việt Nam",
+                age: 32,
+            },
+            {
+                username: "Nguyễn Thành Long 2",
+                password: "123456",
+                nationality: "Việt Nam",
+                age: 35,
+            }
+        ]
+    </script>
+</body>
+
+</html>

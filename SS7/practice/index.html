@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
         // BT1: In ra các số lẻ trong khoảng từ (0 -> 1020)
@@ -29,33 +31,123 @@
 
         // BT3: Tạo 1 chức năng nhỏ cho phép người dùng nhập liên tục các số, tính tích các số đó và in ra kết
         // quả khi người dùng nhập "Kết thúc"  
-        let result = 1
-        while(true) {
-            let inputUser = prompt("Nhập vào số cần tính tích")
+        // let result = 1
+        // while (true) {
+        //     let inputUser = prompt("Nhập vào số cần tính tích")
 
-            if(inputUser === "Kết thúc") {
-                break
-            } else {
-                let convertedNumberInput = +inputUser
+        //     if (inputUser === "Kết thúc") {
+        //         break
+        //     } else {
+        //         let convertedNumberInput = +inputUser
 
-                if(Number.isNaN(convertedNumberInput)) {
-                    console.log("Giá trị nhập vào không phải số")
-                    break
-                } else {
-                    result = result * convertedNumberInput
-                }
-            }
-        }
+        //         if (Number.isNaN(convertedNumberInput)) {
+        //             console.log("Giá trị nhập vào không phải số")
+        //             break
+        //         } else {
+        //             result = result * convertedNumberInput
+        //         }
+        //     }
+        // }
 
-        console.log(result)
+        // console.log(result)
         // BT4: In ra màn hình ngày nghỉ hoặc ngày làm việc khi người dùng nhập vào các thứ Monday, Tuesday, Wednesday,... biết mn làm việc từ thứ 2 tới thứ 6, nghỉ thứ 7 và chủ nhật
+        // let day = prompt("Nhập ngày")
+        // if (day === "saturday" || day === "sunday") {
+        //     console.log("nghỉ làm")
+        // } else {
+        //     console.log("đi làm")
+        // } else {
+        //     console.log()
+        // }
+        // let offDays = ["saturday", "sunday"]
+        // let workingDays = ["monday", "tuesday", "wednesday", "thursday", "friday"]
 
+        // let userInput = prompt("Hãy nhập vào thứ muốn kiếm tra")
+
+        // if(offDays.includes(userInput.toLowerCase())) {
+        //     console.log("Đây là ngày nghỉ")
+        // } else if(workingDays.includes(userInput.toLowerCase())) {
+        //     console.log("Đây là ngày đi làm")
+        // } else {
+        //     console.log("Ngày nhập vào không hợp lệ")
+        // }
         // BT5: Tính số tiền điện phải trả trong 1 tháng biết bảng giá điện như sau: 
         // 0 - 50kwh có giá 500/kwh
         // 51 -100kwh có giá 800/kwh
         // 101 - 500kwh có giá 1500/kwh
         // biết số điện sử dụng được nhập bởi người quản lý
         // Nâng cao: Giả sử tài khoản của người quản lý là admin, mật khẩu 123456. Hãy kiểm tra để yêu cầu người dùng nhập đúng thông tin tài khoản mới được nhập số điện để thực hiện tính toán. Nếu nhập sai dưới 5 lần sẽ thông báo nhập sai tài khoản, nếu nhập sai 5 lần sẽ thông báo khóa tài khoản
+        // let userInput = +prompt("Nhập vào số điện đã sử dụng")  
+        // let result = 0
+        // if(userInput >= 0 && userInput <= 50) {
+        //     result += 500 * userInput   
+        // } else if(userInput > 50 && userInput <= 100) {
+        //     result += 500 * 50 + 800 * (userInput - 50)
+        // } else if(userInput > 100) {
+        //     result += 500 * 50 + 800 * 50 + 1500 * (userInput - 100)
+        // }
+
+        // console.log(result)
+
+        let users = [{
+                username: "admin",
+                password: "123456",
+                role: "admin"
+            },
+            {
+                username: "common-user",
+                password: "12345678",
+                role: "user"
+            },
+            {
+                username: "manager",
+                password: "odauconlaumoinoi",
+                role: "manager"
+            }
+        ]
+
+        let numberOfFailures = 0
+        let isLogin = false
+        let currentUser = null    
+        do {
+            let usernameFromInput = prompt("Nhập vào username của bạn")
+            let passwordFromInput = prompt("Nhập vào password của bạn")
+
+            for (let i = 0; i < users.length; i++) {
+                if (users[i].username === usernameFromInput && users[i].password === passwordFromInput) {
+                    console.log("Bạn đăng nhập thành công")
+                    isLogin = true
+                    currentUser = users[i]
+                    break
+                } 
+            }
+
+            if (isLogin === false) {
+                console.log("Bạn nhập sai thông tin, vui lòng kiểm tra và nhập lại")
+
+                numberOfFailures++
+            }
+
+            if (numberOfFailures === 5) {
+                console.log("Bạn đã nhập sai quá số lần quy định")
+            }
+        } while (numberOfFailures < 5 && !isLogin)
+
+
+        if (isLogin && currentUser.role === "admin") {
+            let userInput = +prompt("Nhập vào số điện đã sử dụng")
+            let result = 0
+            if (userInput >= 0 && userInput <= 50) {
+                result += 500 * userInput
+            } else if (userInput > 50 && userInput <= 100) {
+                result += 500 * 50 + 800 * (userInput - 50)
+            } else if (userInput > 100) {
+                result += 500 * 50 + 800 * 50 + 1500 * (userInput - 100)
+            }
+
+            console.log(result)
+        }
     </script>
 </body>
+
 </html>
