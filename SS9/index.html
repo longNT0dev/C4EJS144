@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Tham chiếu và tham trị
+        // Tham trị: Chỉ truyền giá trị của nó -> Truyền tham trị nếu kiểu dữ liệu của biến là các kiểu nguyên thủy: number, string, boolean
+        // Tham chiếu: Trỏ tới ô nhớ đã tạo -> Truyền tham chiếu nếu kiểu dữ liệu của biến là array, object
+
+        // Ví dụ về tham trị
+        // let a = 5
+        // let b = a
+
+        // a = 10
+
+        // console.log("Đây là giá trị biến a", a)
+        // console.log("Đây là giá trị biến b", b)
+
+        // Ví dụ về tham chiếu
+        // let a = [1, 2, 3]
+        // // spread operator
+        // let b = [...a]
+        // let bc = a.slice(0)
+
+        // a.push(4)
+
+        // console.log("Đây là giá trị biến a", a)
+        // console.log("Đây là giá trị biến b", b)
+
+        // let a = {
+        //     username: "Long",
+        //     age: 32
+        // }
+
+        // // let b = {...a}
+        // let b = Object.assign({}, a)
+
+        // a.username = "Long updated"
+
+        // console.log("Đây là giá trị biến a", a)
+        // console.log("Đây là giá trị biến b", b)
+
+        // Function - hàm là gì?: 
+        // Một hàm thì thường sử dụng để xử lý 1 logic hoặc công việc cụ thể nào đó
+
+        function tenHam(params1, params2, params3) {
+            // Đoạn code logic xử lý 
+            // scope: Phạm vi
+        }
+
+        function printSum(num1, num2) {
+            // num1, num2 là tên biến dùng trong hàm, có thể đặt tùy ý 
+            let convertedNum1 = Number(num1)
+            let convertedNum2 = Number(num2)
+
+            if (Number.isNaN(convertedNum1) || Number.isNaN(convertedNum2)) {
+                console.log("Một trong 2 giá trị truyền vào không phải số")
+            } else { // Những trường hợp còn lại
+                console.log(convertedNum1 + convertedNum2)
+            }
+        }
+
+        // Gọi hàm
+        // printSum("0", "fdffjj") // tương đương việc truyền vào num1 = 2, num2 = 3
+        // printSum(5, 7)
+
+
+        let user = {
+            // properties
+            username: "Nguyễn Thành Long",
+            password: "123456",
+            nationality: "Việt Nam",
+            age: 32,
+
+            login: function () {
+                // Hành động thực hiện
+            },
+            dangkythi: function () {
+                // Hành động thực hiện
+            },
+            logSum: function (num1, num2) {
+                // num1, num2 là tên biến dùng trong hàm, có thể đặt tùy ý 
+                let convertedNum1 = Number(num1)
+                let convertedNum2 = Number(num2)
+
+                if (Number.isNaN(convertedNum1) || Number.isNaN(convertedNum2)) {
+                    console.log("Một trong 2 giá trị truyền vào không phải số")
+                } else { // Những trường hợp còn lại
+                    console.log(convertedNum1 + convertedNum2)
+                }
+            }
+        }
+
+        user.logSum(2, 3)
+
+
+
+        {
+            let insideScope = 5 // var sẽ khai báo 1 biến phạm vi global
+        }
+
+        console.log(insideScope)
+
+
+        // Nhóm 1: Quản lý chi tiêu
+        // Nguyễn Đức Duy*
+        // Võ Anh Dũng
+        // Ngô Quang Minh
+
+        // _ Ghi chép các khoản thu/chi 
+        // _ Tính toán các khoản thu/chi
+        // _ Lên mục tiêu số tiền cần tích lũy
+        // _ Tạo ra biểu đồ dựa trên dữ liệu thu/chi hàng ngày/hàng tháng
+        // -> Dùng thử ứng dụng có trước và nghĩ thêm tính năng
+        // -> Sau khi liệt kê chức năng, tìm giao diện 
+
+
+        // Nhóm 2: 
+        // Phạm Quốc Anh
+        // Vũ Văn Trung*
+        // Nguyễn Tuấn Hưng
+        // -> Máy bay, meme, đồ ăn -> Forum nhiều đề tài 
+
+
+        // Nhóm 3: Ứng dụng 
+        // Đinh Đức Thịnh 
+        // Trần Hạnh Chi
+        // Đỗ Duy Khánh*
+
+        // _ Đăng ký tài khoản (2 role: Người thuê đánh giày và người đánh giày)/ Đăng nhập
+        // _ Liên kết sđt, ngân hàng, xác minh danh tính 
+        // _ Thăng hạng nếu sử dụng dịch vụ nhiều, voucher 
+        // _ Rating, comment
+        // _ Report trường hợp sai phạm
+        // _ Admin cảnh báo, chặn tài khoản vi phạm
+        // _ Admin biểu đồ, thông kê doanh thu, thống kê số người dùng
+        // _ Người thuê 
+        // 	+ Book dịch vụ đánh giày (Loại giày, đánh cao cấp, đánh thường, cách thanh toán) -> Thời gian người đánh giày sẽ đến 
+        //  + Đánh giá dịch vụ sau khi hoàn thành
+      
+        // _ Người đánh giày
+        //  + Nhận đơn
+        //  + Thưởng khi đạt KPI ngày   
+        
+        // _ Tính tiền cho 2 bên và cho business
+
+    </script>
+</body>
+
+</html>
