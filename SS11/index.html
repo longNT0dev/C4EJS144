@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="username">
+
+
+    <script>
+        const username = document.getElementById("username");
+
+        // username.addEventListener("change", function () {
+        //     console.log(username.value)
+        // })
+
+        // Từ khóa return trong function
+        function sum(a, b) {
+            return a + b
+        }
+
+        // Sau khi tính tổng, sử dụng kết quả đó để thực hiện 1 phép tính khác
+        // console.log(sum(2, 3) * 5) 
+
+        // callback: Là 1 hàm nhưng sẽ gọi là callback nếu như nó là tham số của 1 hàm khác 
+        // addEventListener(event, function)
+        username.addEventListener("click", function (e) {
+            console.log(e)
+        })
+
+
+
+        // storage: Lưu trữ thông tin, hoạt động của người dùng trên client
+        // localStorage.setItem("token", "nguyenthanhflong") // Lưu dạng số hoặc string
+
+        // console.log(localStorage.getItem("token") + "somethingnew")
+        // localStorage.token = "nguyenthanhflong"
+
+        // // Lưu array/object vào localStorage
+        // let arr = [1,2,3,4,5,6]
+
+        // // Khi lưu array/object thì cần chuyển sang dạng string bằng hàm JSON.stringify
+        // localStorage.newArr = JSON.stringify(arr)
+
+        // // Khi đọc dữ liệu từ storage, nếu nó là 1 array/object thì cần dùng hàm JSON.parse để chuyển về dạng chuẩn
+        // let arrFromStorage = JSON.parse(localStorage.newArr)
+
+        // console.log(typeof arrFromStorage)
+
+        // arrFromStorage.push(7)
+
+        // console.log(arrFromStorage)
+
+        // localStorage.newArr = JSON.stringify(arrFromStorage)
+
+        // delete localStorage.newArr
+
+        // sessionStorage.token = "NguyenThanhLong"
+
+
+        // ES6: Phiên bản của javascript 
+        // arrow function 
+        // const printLog = () => {
+        //     console.log("Xin chào các bạn, hôm nay nhiều kiến thức quá")
+        // }   
+
+        // printLog()
+
+        // const sum = (a,b) => {
+        //     return a + b
+        // }
+
+        // const sum = (a,b) => a + b
+
+        // spread operator: ... -> Copy các giá trị từ array/object này sang array/object khác 
+
+        // destructuring: Tách/gán giá trị trong 1 mảng hoặc object cho 1 biến mới    
+        // const arr = [1, 2, 3];
+
+        // const [a,...b] = arr
+
+        // console.log(a,b)
+
+        // const [a, b, c] = arr;
+        // console.log(a, b, c); // Kết quả: 1 2 3 chatgpt
+
+        // const obj = {
+        //     name: "Long",
+        //     job: "teacher"
+        // }
+
+        // let name = obj.name
+        // let job = obj.job
+
+        // const {
+        //     name,
+        //     job
+        // } = obj
+
+        // console.log(name1, job)
+
+
+        // setTimeout(() => {
+        //     console.log("Bên trong setTimeout")
+        // }, 0)
+
+        // console.log("Code trước setTimeout")
+        // let count = 0    
+        // let inter = setInterval(() => {
+        //     console.log("In ra sau mỗi 1s")
+        //     ++count
+        //     if(count == 5) {
+        //         clearInterval(inter)
+        //     }
+        // }, 1000)
+    </script>
+
+    <script type="module" src="B.js"></script>
+    <script type="module" src="A.js"></script>
+    
+</body>
+
+</html>

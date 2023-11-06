@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- <div id="container">
+        <p>Text 1</p>
+        <p>Text 2</p>
+        <p>Text 3</p>
+        <p>Text 4</p>
+        <p>Text 5</p>
+    </div> -->
+
+
+
+    Tạo ứng dụng để khi bấm vào 1 thẻ sẽ in ra nội dung của thẻ đó
+    <div class="class-1 content">Nội dung 1</div>
+    <div class="class-2 content">Nội dung 2</div>
+    <div class="class-3 content">Nội dung 3</div>
+    <div class="class-4 content">Nội dung 4</div>
+    <div class="class-5 content">Nội dung 5</div>
+
+
+
+
+    <script>
+        // DOM - Document Object Model: Biểu diễn các thẻ HTML dưới dạng cây 
+        // console.log(document)
+
+        // console.dir(document)
+
+
+        // Cách 1: Lấy thẻ thông qua id 
+        // let container = document.getElementById("container")
+        // let item = document.getElementById("item-5")
+        // attributes của thẻ 
+        // innerText: Thêm 1 đoạn text vào trong thẻ
+        // container.innerText = "Hello world!"
+        // // innerHTML: Thêm 1 thẻ html khác vào bên trong
+        // container.innerHTML = '<h1>Đây là tiêu đề bài viết</h1>' // XSS 
+        // // style: Thay đổi css của thẻ
+        // container.style.color = 'red'
+        // container.style.backgroundColor = 'black'
+
+        // methods của thẻ
+        // createElement: Tạo ra 1 thẻ html 
+        // let newEl = document.createElement('h3')
+        // newEl.innerText = 'Đây là tiêu đề thứ 3 của bài viết'
+
+        // // appendChild: Thêm 1 thẻ html vào trong 1 thẻ khác
+        // container.appendChild(newEl)
+
+        // Xóa 1 thẻ con nằm bên trong thẻ cha 
+        // container.removeChild(container.lastElementChild)
+
+        // Cách 2: Lấy thẻ thông qua class
+        let elements = document.getElementsByClassName("content")
+
+        for (let i = 0; i < elements.length; i++) {
+            // console.log(elements[i].innerText)
+            elements[i].addEventListener('', function () {
+                console.log(elements[i].innerText)
+            })
+        }
+
+        // Event: onclick, onchange, onkeydown, onkeypress
+        // addEventListener
+
+
+        // Cách 3: Lấy thẻ thông qua tên thẻ
+        // let elements2 = document.getElementsByTagName('div')
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Xin chào  <span id="nameForInput"></span></p>
+    <button onclick="printName()">In ra tên</button>
+
+    <script>
+        // 1. Tạo 1 thẻ p với nội dung "Xin chào" trong html
+        // 2. Tạo 1 nút bấm, khi người dùng bấm vào nút đó sẽ cho phép người dùng nhập tên của họ. Khi người dùng nhập tên xong sẽ in ra "Xin chào" + Tên vừa nhập trên màn hình
+        function printName() {
+            let userInput = prompt("Nhập tên của bạn")
+            const nameForInput = document.getElementById("nameForInput")
+
+            nameForInput.innerText = userInput
+        }
+
+
+        // 3. Tạo 1 form đăng ký yêu cầu nhập email và password, tên đầy đủ, ngày sinh, 1 thẻ button. Khi người dùng bấm đăng ký cần kiểm tra có đúng định dạng email không, password ít nhất 8 ký tự, tên đầy đủ không chứa số, ngày sinh hợp lệ. Nếu tất cả hợp lệ sẽ thông báo tạo thành công và chuyển tới trang Contact mới
+
+
+
+        // 4. Tạo 1 mảng chứa các object bao gồm các thông tin như sđt, tên. Hiển thị danh sách đó với giao diện tùy chọn, cho phép xóa 1 số điện thoại khỏi danh sách liên lạc
+
+
+
+    </script>
+</body>
+</html>
